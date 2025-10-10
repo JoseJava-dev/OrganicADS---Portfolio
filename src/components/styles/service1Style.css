@@ -1,0 +1,23 @@
+.contentText{
+     display: flex;
+  flex-direction: column;
+  /* ocupa todo el alto del padre */
+  height: 100%;
+  /* reparten el espacio libre entre los hijos */
+  justify-content: space-between; /* o space-evenly si prefieres espacios iguales alrededor */
+  /* opcional: para que el ancho y padding no crezcan fuera del box */
+  box-sizing: border-box;
+}
+
+.title_service {
+  color: var(--secondary);
+}
+
+.contentText h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: larger;
+  color: white;
+}

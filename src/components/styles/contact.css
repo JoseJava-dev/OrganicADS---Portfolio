@@ -1,0 +1,49 @@
+/* Contact.css */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;  /* empuja el contenido hacia arriba */
+  width: 100%;
+  height: 100%;                 /* que ocupe todo el alto posible de su padre */
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  gap: 0.5rem;                   /* espacio entre título y botón */
+}
+
+.contact h2 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  color: var(--text-title);
+  margin: 0;                     /* quita el margin-bottom excesivo */
+}
+
+.contact__whatsapp {
+  display: flex;                 /* para que respete width */
+  align-items: center;
+  justify-content: center;
+  width: 90%;                    /* ocupa el 90% del ancho del .contact */
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.contact__whatsapp:hover {
+  opacity: 0.9;
+}
+
+.contact__icon {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.contact__text {
+  line-height: 1;
+  font-weight: 800;
+  text-align: center; 
+  color: white;
+}

@@ -1,0 +1,27 @@
+.proceSpan {
+      display: flex;
+  flex-direction: column;
+  /* ocupa todo el alto del padre */
+  height: 100%;
+  /* reparten el espacio libre entre los hijos */
+  justify-content: space-between; /* o space-evenly si prefieres espacios iguales alrededor */
+  /* opcional: para que el ancho y padding no crezcan fuera del box */
+  box-sizing: border-box;
+}
+
+.proceSpan p {
+  margin: 0; /* elimina espacios entre párrafos */
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.proceSpan h2 {
+  color: var(--blueElectric);
+  font-size: 30px;
+}
+
+.proceSpan strong {
+  display: inline;
+  font-weight: 600;
+  color: #19b7df;
+}

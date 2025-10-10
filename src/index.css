@@ -1,0 +1,40 @@
+/* ✅ Importa Montserrat (puedes hacerlo en el CSS global o en el index.html) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ✅ Variables base */
+:root {
+  --font-sans: 'Montserrat', sans-serif;
+  --line-height: 1.5;
+  --font-weight-base: 400;
+
+  --primary: #0b3d91;
+  --secondary: #ff4500;
+  --text-title: #ffffff;
+  --card: #1D1E3C;
+  --background: #0D0F21;
+  --foreground1: #d1d5db;
+  --border: #2e3350;
+
+  --transition-base: all 0.3s ease-in-out;
+  --shadow-color: rgba(28, 175, 243, 0.904);
+  --shadow-color-left: #ff4500;
+  --blueElectric: #41DEF7;
+}
+
+/* ✅ Aplicar Montserrat globalmente */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--background);
+  font-family: var(--font-sans);
+  color: var(--foreground1);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-base);
+}
+
+/* ✅ Asegurar coherencia en todos los textos */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
