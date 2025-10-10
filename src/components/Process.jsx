@@ -10,7 +10,7 @@ const Process = ({ handleWindow }) => {
           <button className="buttonClose" onClick={handleWindow}>x</button>
         </div>
         <div className="proceSpan">
-          /* <strong>🔍 Auditoría personalizada</strong>
+           <strong>🔍 Auditoría personalizada</strong>
           <p>Analizo tus redes o campañas para detectar oportunidades y definir tu punto de partida.</p>
 
           <strong>👤 Optimización de perfiles</strong>
@@ -23,7 +23,7 @@ const Process = ({ handleWindow }) => {
           <p>Creo textos e ideas que transmiten valor y convierten seguidores en clientes.</p>
 
           <strong>🤝 Acompañamiento</strong>
-          <p>Te guío paso a paso para entender tus métricas y mejorar tus resultados.</p> */
+          <p>Te guío paso a paso para entender tus métricas y mejorar tus resultados.</p>
         </div>
       </div>
     </div>,
