@@ -1,29 +1,28 @@
-import React from 'react'
+import React from "react";
+import { createPortal } from "react-dom";
 import "../components/styles/proceStyle.css";
 
-const Process = () => {
-  return (
-  <div className="proceSpan">
-    
-    {/* <strong>🔍 Auditoría personalizada</strong> 
-    <p>Analizo tus redes o campañas para detectar oportunidades y definir tu punto de partida.</p>
+const Process = ({ handleWindow }) => {
+  return createPortal(
+    <div className="modal-overlay" onClick={handleWindow}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="buttonContent">
+          <button className="buttonClose" onClick={handleWindow}>x</button>
+        </div>
+        <div className="infoContainer">
+          <span>Fecha de inicio: 01/01/2025sasasasasasasa</span><br />
+          <span>Monto para participar: 100$</span><br />
+          <span>Fecha de culminación: 31/01/2025</span><br />
+          <span>Usuarios participando</span><br />
+          <span>Apostar a otros participantes</span><br />
+          <span>Reglamento</span>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+};
 
-    <strong>👤 Optimización de perfiles</strong>
-    <p>Mejoro tu biografía, estética y comunicación para atraer a tu cliente ideal.</p>
-
-    <strong>📈 Estrategias de crecimiento</strong>
-    <p> Diseño planes de contenido organico o de pago que aumentan tu visibilidad y conexión real.</p>
-
-    <strong>✏️ Copywriting estratégico</strong>
-    <p>Creo textos e ideas que transmiten valor y convierten seguidores en clientes.</p>
-
-    <strong>🤝 Acompañamiento</strong>
-    <p>Te guío paso a paso para entender tus métricas y mejorar tus resultados.</p> */}
-  </div>
-
-  )
-}
-
-export default Process
+export default Process;
 
 

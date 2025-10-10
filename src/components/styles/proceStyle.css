@@ -1,27 +1,43 @@
-.proceSpan {
-      display: flex;
-  flex-direction: column;
-  /* ocupa todo el alto del padre */
-  height: 100%;
-  /* reparten el espacio libre entre los hijos */
-  justify-content: space-between; /* o space-evenly si prefieres espacios iguales alrededor */
-  /* opcional: para que el ancho y padding no crezcan fuera del box */
-  box-sizing: border-box;
+/* Este debe ser el className del div Contenedor / 'padre'*/
+.modal-overlay { 
+  position: fixed; /* Mantiene el overlay fijo en la pantalla, incluso al hacer scroll */
+  top:  0; /* Posiciona el overlay en la parte superior de la ventana */
+  left: 0; /* Posiciona el overlay en el lado izquierdo de la ventana */
+  width: 100vw; /* Hace que el overlay cubra todo el ancho de la pantalla */
+  height: 100vh; /* Hace que el overlay cubra todo el alto de la pantalla */
+  background: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente para dar efecto de oscurecimiento */
+  display: flex; /* Usa Flexbox para organizar el contenido dentro del overlay */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  z-index: 1000; /* Asegura que el overlay esté por encima de otros elementos */
+}
+/*  Este debe ser el className del div Contenido / 'hijo' */
+.modal-content {
+  position: relative; /* Permite posicionar elementos secundarios dentro del modal (como botones) */
+  border: solid white; /* Aplica un borde blanco alrededor del modal */
+  padding: 20px; /* Agrega espacio interno alrededor del contenido del modal */
+  border-radius: 8px; /* Hace que las esquinas del modal sean redondeadas */
+  max-width: 80vw; /* Limita el ancho máximo del modal a 400px */
+  height: 80vh;
+  width: 100%; /* Permite que el modal sea responsivo y ocupe hasta el 100% de su contenedor */
+  text-align: center; /* Centra el texto dentro del modal */
+  background-color: #242424; /* Aplica un color de fondo gris oscuro al modal */
 }
 
-.proceSpan p {
-  margin: 0; /* elimina espacios entre párrafos */
-  font-size: 15px;
-  margin-bottom: 20px;
+
+
+.buttonContent{
+  display: flex;
+  justify-content: end;
 }
 
-.proceSpan h2 {
-  color: var(--blueElectric);
-  font-size: 30px;
-}
-
-.proceSpan strong {
-  display: inline;
-  font-weight: 600;
-  color: #19b7df;
+.buttonClose{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 2px;
 }

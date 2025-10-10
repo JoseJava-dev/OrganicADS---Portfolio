@@ -11,6 +11,11 @@ import tarjeta_azul from '/src/assets/tarjeta_azul.svg';
 import imgPortada from '/src/assets/imagen_portada.png';
 
 export default function CardCurva() {
+
+  const [isVisible, setIsVisible] = useState(false)
+  const handleWindow = (() => setIsVisible(!isVisible))
+
+
   const [isMobile, setIsMobile] = useState(
     window.innerWidth <= 1300
   );
@@ -53,14 +58,16 @@ export default function CardCurva() {
               <p>Clic aqui</p>
             </div>
 
-            <div className="cardDown"style={{
+            <div className="cardDown"
+              onClick={handleWindow}
+              style={{
               backgroundImage: `url(${tarjeta_azul})`,
               backgroundSize: 'cover',
               backgroundPosition: '92%',
               backgroundRepeat: 'no-repeat'   
             }}>
               <h2>Como puedo ayudarte</h2>
-               
+              {isVisible && ( <> <Process handleWindow={handleWindow}/>  </> ) }   
               <p>Clic aqui</p>
             </div>
           </div>
@@ -89,7 +96,7 @@ export default function CardCurva() {
   return (
     <div className="content">
       <div className="lateralContent">
-        <div className="lateralCard_1"><Service1 /></div>        
+        <div className="lateralCard_1"><Service1 />{isVisible && ( <> <Process handleWindow={handleWindow}/>  </> ) }</div>        
         <div className="lateralCard"><Contact /></div>
       </div>
       <div className="cardContent">
@@ -111,14 +118,17 @@ export default function CardCurva() {
             <h2>Mira lo que he hecho</h2>
               <p>Clic aqui</p>
         </div>
-          <div className="cardDown" style={{
-          backgroundImage: `url(${tarjeta_azul})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'   
-         }}><h2>Como puedo ayudarte</h2>
-            <p>Clic aqui</p>
-            <Process/>
+          <div className="cardDown"
+            onClick={handleWindow} 
+            style={{
+            backgroundImage: `url(${tarjeta_azul})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'   
+            }}>
+              <h2>Como puedo ayudarte</h2>
+              <p>Clic aqui</p>
+                          
           </div>
         </div>
       </div>
