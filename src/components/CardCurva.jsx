@@ -9,6 +9,7 @@ import esfera_blanca from '/src/assets/esfera-blanca.svg';
 import tarjeta_naranja from '/src/assets/tarjeta_naranja.svg';
 import tarjeta_azul from '/src/assets/tarjeta_azul.svg';
 import imgPortada from '/src/assets/imagen_portada.png';
+import { Link, Route, Routes } from "react-router-dom";
 
 export default function CardCurva() {
 
@@ -53,9 +54,9 @@ export default function CardCurva() {
               backgroundSize: 'cover',
               backgroundPosition: '20% center',
               backgroundRepeat: 'no-repeat'   
-            }}
-            ><h2>Mira lo que he hecho</h2>
-              <p>Clic aqui</p>
+            }}><Link to="/workDid">
+              <h2>Mira lo que he hecho</h2>
+              <p>Clic aqui</p></Link>
             </div>
 
             <div className="cardDown"
@@ -94,6 +95,7 @@ export default function CardCurva() {
 
   // Versión desktop para pantallas > 1300px
   return (
+    <>    
     <div className="content">
       <div className="lateralContent">
         <div className="lateralCard_1"><Service1 />{isVisible && ( <> <Process handleWindow={handleWindow}/>  </> ) }</div>        
@@ -114,9 +116,9 @@ export default function CardCurva() {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'   
-         }}>
-            <h2>Mira lo que he hecho</h2>
-              <p>Clic aqui</p>
+         }}><Link to="/workDid">
+            <h2>Mira como trabajo</h2>            
+              <p>Clic aquí</p></Link>
         </div>
           <div className="cardDown"
             onClick={handleWindow} 
@@ -138,5 +140,6 @@ export default function CardCurva() {
         </div>        
       </div>
     </div>
+    </>
   );
 }

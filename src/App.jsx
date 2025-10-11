@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import CardCurva from './components/CardCurva';
+import { Route, Routes } from 'react-router-dom';
+import WorkDid from './pages/WorkDid';
+
 
 function App() {
 
 
   return (
-    <>
-      <CardCurva/>
+    <>      
+      <Routes>
+        <Route path="/" element={<CardCurva />} />
+        <Route path='/workDid' element={<WorkDid/> } />
+      </Routes>
     </>
   )
 }

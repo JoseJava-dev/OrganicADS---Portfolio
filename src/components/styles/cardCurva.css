@@ -374,4 +374,14 @@ span {
     flex: 0 0 auto !important;
   }
 
+  .lateralCard_1 {
+    display: flex;              /* o block, según el layout */
+  flex-direction: column;     /* útil si hay texto e imagen */
+  width: auto;                /* se ajusta al contenido horizontal */
+  height: auto;               /* se ajusta al contenido vertical */
+  max-width: 100%;            /* nunca sobrepasa el ancho del contenedor */
+  overflow: hidden;           /* evita que se salga el contenido */
+  box-sizing: border-box;
+  }
+
 }
