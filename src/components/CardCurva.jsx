@@ -9,7 +9,7 @@ import esfera_blanca from '../assets/esfera-blanca.svg';
 import tarjeta_naranja from '../assets/tarjeta_naranja.svg';
 import tarjeta_azul from '../assets/tarjeta_azul.svg';
 import imgPortada from '../assets/imagen_portada.png';
-import { Link, Route, Routes } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 export default function CardCurva() {
 
