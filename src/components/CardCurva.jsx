@@ -5,10 +5,10 @@ import Contact from "./Contact";
 import Process from "./Process";
 import Service1 from "./Service1";
 import Title from "./Title";
-import esfera_blanca from '/src/assets/esfera-blanca.svg';
-import tarjeta_naranja from '/src/assets/tarjeta_naranja.svg';
-import tarjeta_azul from '/src/assets/tarjeta_azul.svg';
-import imgPortada from '/src/assets/imagen_portada.png';
+import esfera_blanca from '../assets/esfera-blanca.svg';
+import tarjeta_naranja from '../assets/tarjeta_naranja.svg';
+import tarjeta_azul from '../assets/tarjeta_azul.svg';
+import imgPortada from '../assets/imagen_portada.png';
 import { Link, Route, Routes } from "react-router-dom";
 
 export default function CardCurva() {
