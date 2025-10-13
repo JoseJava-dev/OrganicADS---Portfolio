@@ -4,7 +4,7 @@ import esfera_blanca from '../assets/esfera-blanca.svg';
 import '../pages/workStyles.css';
 
 /**
- * Cargar a netlify. 
+
  
  * Josma debe dar instrucciones de modificacion.
  * agregar img antes y despues.
