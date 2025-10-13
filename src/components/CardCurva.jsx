@@ -54,8 +54,8 @@ export default function CardCurva() {
               backgroundSize: 'cover',
               backgroundPosition: '20% center',
               backgroundRepeat: 'no-repeat'   
-            }}><Link to="/workDid">
-              <h2>Mira lo que he hecho</h2>
+            }}><Link to="/workDid"><br/>
+              <h2>Mira Como trabajo</h2>
               <p>Clic aqui</p></Link>
             </div>
 
