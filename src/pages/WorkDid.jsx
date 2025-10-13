@@ -5,7 +5,8 @@ import '../pages/workStyles.css';
 
 /**
 
- 
+ * Reducir px de tarjeta azul.
+ * Modificar el borde.
  * Josma debe dar instrucciones de modificacion.
  * agregar img antes y despues.
  * Proponle a Josma trabajar para trabajar para agenTech, que te ahga un plan en secciones y le vas pagando en secciones.
