@@ -179,14 +179,18 @@
   align-items: flex-end;
   text-align: end;  
   padding: 6rem 1rem 1rem 1rem;
-  font-weight: 800;
+  font-weight: 800;   
+}
+
+.cardDown_left a {
+ text-decoration: none; /* elimina el subrayado */
 }
 
 .cardDown_left:hover {
   transform: translateY(-8px);
   /* opcional: intensifica la sombra para reforzar el efecto */
   box-shadow: 0 12px 24px var(--shadow-color-left);
-  border: solid var(--shadow-color-left);
+  border: solid var(--shadow-color-left);   
 }
 
 .cardDown_left h2 {
@@ -198,6 +202,15 @@
     
     margin-top: 8rem;
     margin-bottom: 3.8rem;
+  }
+
+  .cardDown_left p {
+    
+   font-size: 20px;
+  }
+.cardDown p {
+    font-size: 20px;
+  
   }
 
 .cardDown {

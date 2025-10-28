@@ -8,6 +8,7 @@ const Service1 = () => {
         <p className='text_service'>✅ Copywriting y contenido estratégico</p>
         <p className='text_service'>✅ Estrategia y gestión de redes sociales</p>
         <p className='text_service'>✅ Publicidad en Meta Ads (Facebook / Instagram)</p>
+        <p className='text_service'>✅ Genero enlaces personalizados y código QR</p>
     </div>
   )
 }

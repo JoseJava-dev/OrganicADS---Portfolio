@@ -7,13 +7,13 @@ const Contact = () => {
     <div className="contact">
       <h2>Consultas</h2>
       <a
-        href="https://wa.me/56912345678"
+        href="https://bit.ly/ASESORIA_ORGANICADS"
         target="_blank"
         rel="noopener noreferrer"
         className="contact__whatsapp"
       >
         <FaWhatsapp className="contact__icon" />
-        <span className="contact__text">+56 9 1234 5678</span>
+        <span className="contact__text">Whatsapp</span>
       </a>
     </div>
   )

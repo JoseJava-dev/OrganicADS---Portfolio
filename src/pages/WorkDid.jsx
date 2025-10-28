@@ -2,6 +2,22 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import esfera_blanca from '../assets/esfera-blanca.svg';
 import '../pages/workStyles.css';
+import repuesto1antes from '../assets/repuesto1antes.png';
+import repuesto1despues from '../assets/repuesto1despues.png';
+import repuesto2antes from '../assets/repuesto2antes.jpg';
+import repuesto2despues from '../assets/repuesto2despues.png';
+import sushi1antes from '../assets/sushi1antes.jpg';
+import sushi1despues from '../assets/sushi1despues.jpg';
+import sushi2antes from '../assets/sushi2antes.jpg';
+import sushi2despues from '../assets/sushi2despues.jpg';
+import sushi3antes from '../assets/sushi3antes.jpg';
+import sushi3despues from '../assets/sushi3despues.jpg';
+import sushi4antes from '../assets/sushi4antes.jpg';
+import sushi4despues from '../assets/sushi4despues.png';
+import sushi5antes from '../assets/sushi5antes.jpg';
+import sushi5despues from '../assets/sushi5despues.jpg';
+
+
 
 /**
 
@@ -50,8 +66,15 @@ const WorkDid = () => {
     { id: 4, url: 'https://youtube.com/shorts/NEzyycABln4?feature=share' },
     { id: 5, url: 'https://youtube.com/shorts/AAZjYRewS-I?feature=share' },
   ];
-
-  const beforeAfterImages = [ { id: 1, before: placeholderImg('Antes'), after: placeholderImg('Después') }, { id: 2, before: placeholderImg('Antes'), after: placeholderImg('Después') }, { id: 3, before: placeholderImg('Antes'), after: placeholderImg('Después') } ];
+  
+  const beforeAfterImages = [ { id: 1, before: repuesto1antes, after: repuesto1despues },
+                              { id: 2, before: repuesto2antes, after: repuesto2despues },
+                              { id: 2, before: sushi1antes, after: sushi1despues },
+                              { id: 2, before: sushi2antes, after: sushi2despues },
+                              { id: 2, before: sushi3antes, after: sushi3despues },
+                              { id: 2, before: sushi4antes, after: sushi4despues },
+                              { id: 2, before: sushi5antes, after: sushi5despues }
+                            ];
 
   const socialMediaAccounts = [
     { id: 1, name: 'Marca Tech', description: 'Gestión completa de la comunidad y estrategia de contenido para una startup de tecnología.', url: '#', imageUrl: placeholderAvatar('MT') },
@@ -98,16 +121,16 @@ const WorkDid = () => {
     <div className="portfolio-body">
       <div className="portfolio-container">
         <header className="portfolio-header">
-          <h1>PORTAFOLIO INTEGRAL</h1>
-          <p>Historias de éxito, píxel a píxel.</p>
+          <h1>Proyectos realizados</h1>
+          <p>así convierto ideas en contenido que genera resultados.</p>
         </header>
 
         <main className="portfolio-grid">
           {/* --- 1. Sección de Videos --- */}
           <section className="card glow-blue card-videos">
             <div className="card-header">
-              <h2>Videos que Inspiran</h2>
-              <p>Historias que he contado en video para marcas.</p>
+              <h2>Videos con estrategia</h2>
+              <p>contenido  que conecta, atrae y convierte.</p>
             </div>
             <div className="carousel">
               <div className="carousel-viewport">
@@ -139,8 +162,8 @@ const WorkDid = () => {
           {/* --- 2. Sección de Imágenes Creadas (NUEVA) --- */}
           <section className="card glow-orange card-created-images">
               <div className="card-header">
-                  <h2>Diseño y Creatividad</h2>
-                  <p>Conceptos visuales que comunican y venden.</p>
+                  <h2>Diseños que comunican</h2>
+                  <p>Contenido visual creado desde cero con propósito.</p>
               </div>
               <div className="carousel">
                   <div className="carousel-viewport">
@@ -169,7 +192,7 @@ const WorkDid = () => {
           <section className="card glow-blue card-images">
             <div className="card-header">
               <h2>Transformaciones Visuales</h2>
-              <p>Detalles que hacen la diferencia.</p>
+              <p>Antes y después que muestran el poder de un buen diseño con intención.</p>
             </div>
             <div className="carousel">
               <div className="carousel-viewport">
@@ -198,11 +221,11 @@ const WorkDid = () => {
             </div>
           </section>
           
-          {/* --- 4. Sección de Redes Sociales (NUEVA) --- */}
+          {/* --- 4. Sección de Redes Sociales (NUEVA) --- 
           <section className="card glow-orange card-socials">
               <div className="card-header">
                   <h2>Gestión de Redes Sociales</h2>
-                  <p>Comunidades que crecen y conectan.</p>
+                  <p>Marcas que han crecido con planificación, contenido y constancia.</p>
               </div>
               <div className="carousel">
                   <div className="carousel-viewport">
@@ -225,13 +248,13 @@ const WorkDid = () => {
                       {socialMediaAccounts.map((_, idx) => <div key={idx} className={`dot ${socialIndex === idx ? 'active' : ''}`} onClick={() => setSocialIndex(idx)}></div>)}
                   </div>
               </div>
-          </section>
+          </section>*/}
 
           {/* --- 5. Sección de Campañas --- */}
           <section className="card glow-blue card-campaigns">
             <div className="card-header">
-              <h2>Estrategias con Resultados</h2>
-              <p>Campañas que impulsan el crecimiento.</p>
+              <h2>Resultados reales </h2>
+              <p>Estadísticas que hablan por sí solas</p>
             </div>
             <div className="campaigns-grid">
               {campaigns.map((campaign, index) => (
@@ -254,8 +277,8 @@ const WorkDid = () => {
           {/* --- 6. Sección CTA --- */}
           <section className="card glow-orange cta-container">
               <ZapIcon />
-              <h2>¿Tu Proyecto es el Próximo?</h2>
-              <p>Hablemos de las metas que alcanzaremos juntos.</p>
+              <h2>Tu proyecto puede ser el próximo</h2>
+              <p>Hablemos de tus ideas y hagámoslas crecer.</p>
               <button className="cta-button">¡COMENCEMOS A TRABAJAR!</button>
           </section>
         </main>
