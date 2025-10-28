@@ -16,6 +16,16 @@ import sushi4antes from '../assets/sushi4antes.jpg';
 import sushi4despues from '../assets/sushi4despues.png';
 import sushi5antes from '../assets/sushi5antes.jpg';
 import sushi5despues from '../assets/sushi5despues.jpg';
+import diseno1 from '../assets/diseno1.jpg';
+import diseno2 from '../assets/diseno2.jpg';
+import diseno3 from '../assets/diseno3.jpg';
+import diseno4 from '../assets/diseno4.jpg';
+import diseno5 from '../assets/diseno5.jpg';
+import diseno6 from '../assets/diseno6.jpg';
+import diseno7 from '../assets/diseno7.jpg';
+import diseno8 from '../assets/diseno8.jpg';
+import reporte_mensual from '../assets/campain.png';
+
 
 
 
@@ -54,26 +64,29 @@ const WorkDid = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const [socialIndex, setSocialIndex] = useState(0);
   const [createdImageIndex, setCreatedImageIndex] = useState(0);
-
+  const [campaignIndex, setCampaignIndex] = useState(0);
   // --- Datos ---
   const placeholderImg = (text) => `https://placehold.co/600x400/17172C/E5E7EB?text=${text}`;
   const placeholderAvatar = (text) => `https://placehold.co/100x100/2563EB/FFFFFF?text=${text}`;
 
   const videos = [
-    { id: 1, url: 'https://youtube.com/shorts/BqnIzjBK2Xg' },
-    { id: 2, url: 'https://youtube.com/shorts/fRe1GQ9r2i0?feature=share' },
-    { id: 3, url: 'https://youtube.com/shorts/JK0_GMgpnMw?feature=share' },
-    { id: 4, url: 'https://youtube.com/shorts/NEzyycABln4?feature=share' },
-    { id: 5, url: 'https://youtube.com/shorts/AAZjYRewS-I?feature=share' },
+    { id: 1, url: 'https://youtube.com/shorts/ultEdqWJhBU?feature=share' },
+    { id: 2, url: 'https://youtube.com/shorts/PGWTAzZQ6-4?feature=share' },    
+    { id: 3, url: 'https://youtube.com/shorts/BqnIzjBK2Xg' },
+    { id: 4, url: 'https://youtube.com/shorts/fRe1GQ9r2i0?feature=share' },
+    { id: 5, url: 'https://youtube.com/shorts/JK0_GMgpnMw?feature=share' },
+    { id: 6, url: 'https://youtube.com/shorts/NEzyycABln4?feature=share' },
+    { id: 7, url: 'https://youtube.com/shorts/AAZjYRewS-I?feature=share' }
+        
   ];
   
   const beforeAfterImages = [ { id: 1, before: repuesto1antes, after: repuesto1despues },
                               { id: 2, before: repuesto2antes, after: repuesto2despues },
-                              { id: 2, before: sushi1antes, after: sushi1despues },
-                              { id: 2, before: sushi2antes, after: sushi2despues },
-                              { id: 2, before: sushi3antes, after: sushi3despues },
-                              { id: 2, before: sushi4antes, after: sushi4despues },
-                              { id: 2, before: sushi5antes, after: sushi5despues }
+                              { id: 3, before: sushi1antes, after: sushi1despues },
+                              { id: 4, before: sushi2antes, after: sushi2despues },
+                              { id: 5, before: sushi3antes, after: sushi3despues },
+                              { id: 6, before: sushi4antes, after: sushi4despues },
+                              { id: 7, before: sushi5antes, after: sushi5despues }
                             ];
 
   const socialMediaAccounts = [
@@ -83,16 +96,18 @@ const WorkDid = () => {
   ];
 
   const createdImages = [
-    { id: 1, title: 'Branding para Evento', imageUrl: placeholderImg('Evento X') },
-    { id: 2, title: 'Campaña Publicitaria', imageUrl: placeholderImg('Oferta') },
-    { id: 3, title: 'Infografía Educativa', imageUrl: placeholderImg('Datos') },
-    { id: 4, title: 'Contenido para Redes', imageUrl: placeholderImg('Post') },
+    { id: 1, title: 'Banner publicitario', imageUrl:  diseno1},
+    { id: 2, title: 'Post', imageUrl:  diseno2},
+    { id: 3, title: 'Post', imageUrl: diseno3},
+    { id: 4, title: 'Post', imageUrl: diseno4},
+    { id: 5, title: 'Post', imageUrl:  diseno5},
+    { id: 6, title: 'Post', imageUrl:  diseno6},
+    { id: 7, title: 'Post para sorteo', imageUrl: diseno7},
+    { id: 8, title: 'Post', imageUrl: diseno8}
   ];
   
   const campaigns = [
-    { title: 'Campaña de Lanzamiento', reach: '10K', beforeConversion: '1.8%', afterConversion: '4.7%' },
-    { title: 'Refuerzo de Marca', reach: '25K', beforeConversion: '1.2%', afterConversion: '4.1%' },
-    { title: 'Campaña Estacional', reach: '15K', beforeConversion: '2.1%', afterConversion: '5.2%' },
+    { title: 'Campaña de Lanzamiento', image: reporte_mensual  }
   ];
 
   // --- Funciones ---
@@ -251,26 +266,50 @@ const WorkDid = () => {
           </section>*/}
 
           {/* --- 5. Sección de Campañas --- */}
-          <section className="card glow-blue card-campaigns">
+          <section className="card glow-orange card-created-images">
             <div className="card-header">
-              <h2>Resultados reales </h2>
+              <h2>Resultados reales</h2>
               <p>Estadísticas que hablan por sí solas</p>
             </div>
-            <div className="campaigns-grid">
-              {campaigns.map((campaign, index) => (
-                <div key={index} className="campaign-item">
-                  <h3>{campaign.title}</h3>
-                  <div className="chart-container">
-                    <svg viewBox="0 0 100 40" preserveAspectRatio="none">
-                      <path d="M0 30 C 20 35, 40 20, 60 25 S 80 5, 100 10" stroke="#4F46E5" fill="rgba(79, 70, 229, 0.2)" strokeWidth="1"/>
-                    </svg>
-                  </div>
-                  <div className="stats-container">
-                    <p>Alcance: {campaign.reach}</p>
-                    <p>Conversión: <strong className="antes">{campaign.beforeConversion}</strong> → <strong className="despues">{campaign.afterConversion}</strong></p>
-                  </div>
+            <div className="carousel">
+              <div className="carousel-viewport">
+                <div
+                  className="carousel-track"
+                  style={{ transform: `translateX(-${campaignIndex * 100}%)` }}
+                >
+                  {campaigns.map((campaign, idx) => (
+                    <div key={campaign.title + idx} className="carousel-item">
+                      <div className="created-image-item">
+                        <div className="created-image-wrapper">
+                          <img src={campaign.image} alt={campaign.title} />
+                        </div>
+                        <h3 className="created-image-title">Crecimiento organico Instagram</h3>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <button
+                className="nav-button prev"
+                onClick={() => handlePrev(setCampaignIndex, campaigns.length)}
+              >
+                <ChevronLeftIcon />
+              </button>
+              <button
+                className="nav-button next"
+                onClick={() => handleNext(setCampaignIndex, campaigns.length)}
+              >
+                <ChevronRightIcon />
+              </button>
+              <div className="dots-container">
+                {campaigns.map((_, idx) => (
+                  <div
+                    key={idx}
+                    className={`dot ${campaignIndex === idx ? 'active' : ''}`}
+                    onClick={() => setCampaignIndex(idx)}
+                  />
+                ))}
+              </div>
             </div>
           </section>
           

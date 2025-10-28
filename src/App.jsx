@@ -6,7 +6,10 @@ import WorkDid from './pages/WorkDid';
 
 function App() {
 
+/*
+link netlify: organicads-portafolio.netlify.app
 
+*/
   return (
     <>      
       <Routes>
